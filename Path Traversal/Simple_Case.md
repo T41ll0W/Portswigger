@@ -1,6 +1,8 @@
-🇬🇧
-# Path Traversal Exploitation
 
+# Path Traversal Exploitation: Simple Case
+
+
+🇬🇧
 This section focuses on exploiting a **Path Traversal** vulnerability by manipulating the `$_GET` variable (`'filename'`) in the URL. Path Traversal occurs when an application does not properly sanitize user input, allowing attackers to access files outside the intended directory.
 
 
