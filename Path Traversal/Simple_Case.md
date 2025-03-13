@@ -51,3 +51,30 @@ To solve the lab, retrieve the contents of the /etc/passwd file.
 
 ### Descripción del laboratorio
 Este laboratorio contiene una vulnerabilidad de **Path Traversal** en la visualización de imágenes de productos. El objetivo es explotar esta vulnerabilidad para recuperar el contenido del archivo `/etc/passwd`.
+
+
+🇬🇧
+The first step is to inspect the page to identify elements that can be exploited. In this case, we focus on the product images, as they could be vulnerable to **Path Traversal**.
+After opening one, we encounter the following request:
+
+🇪🇸
+
+El primer paso es inspeccionar la página para identificar elementos que puedan ser explotados. En este caso, nos centramos en las imágenes de los productos, ya que podrían ser vulnerables a **Path Traversal**.
+tras abrir una nos encontramos con esta peticion:
+
+![Web request of image](.images/path1.png)
+
+🇬🇧
+Once the `filename` parameter has been identified in the intercepted request, we proceed to test if it is vulnerable to **Path Traversal**. To do this, we inject a traversal sequence into the image field with the goal of accessing the `/etc/passwd` file, which contains sensitive system information.
+
+🇪🇸
+Una vez identificado el parámetro `filename` en la solicitud interceptada, procedemos a probar si es vulnerable a **Path Traversal**. Para ello, inyectamos una secuencia de traversals en el campo de la imagen con el objetivo de acceder al archivo `/etc/passwd`, que contiene información sensible del sistema.
+
+![Path Traversal on request](.images/path2.png)
+
+🇬🇧
+If you have followed these steps correctly, you should now see the **lab completed flag**. This indicates that the Path Traversal vulnerability has been successfully exploited, and the lab objective has been achieved. Congratulations! 🎉
+
+🇪🇸
+Si has seguido estos pasos correctamente, ahora deberías ver la **flag de laboratorio completado**. Esto indica que la vulnerabilidad de Path Traversal ha sido explotada con éxito y que el objetivo del laboratorio se ha cumplido. ¡Felicidades! 🎉
+
